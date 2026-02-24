@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store Sales</title>
+</head>
+<body>
+
+<p id="result"></p>
+<p id="updatedcost"></p>
+<script>
+   
+    var tshirtsSold = 5;
+    var tshirtPrice = 400;
+    var capsSold = 3;
+    var capPrice = 150;
+
+    var totalEarnings = (tshirtsSold * tshirtPrice) + (capsSold * capPrice);
+
+    document.getElementById("result").innerHTML =
+        "Total Earnings: " + totalEarnings;
+
+    tshirtPrice = 450;
+
+    totalEarnings = (tshirtsSold * tshirtPrice) + (capsSold * capPrice);
+
+    document.getElementById("updatedcost").innerHTML +=
+        "Updated Total Earnings: " + totalEarnings;
+</script>
+</body>
+</html>
