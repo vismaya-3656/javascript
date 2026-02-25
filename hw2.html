@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Manager</title>
+</head>
+<body>
+
+    <h2>Contact List</h2>
+    <p id="output"></p>
+
+    <script>
+       
+        let contact1 = {
+            name: "Aju",
+            phone: "985-456-9800",
+            email: "Aju0075@gmail.com",
+
+            getInfo: function() {
+                return "Name: " + this.name +
+                       ", Phone: " + this.phone +
+                       ", Email: " + this.email;
+            }
+        };
+
+        
+        let contact2 = {
+            name: "Surya",
+            phone: "987-102-3210",
+            email: "Surya@gmail.com",
+
+            getInfo: function() {
+                return "Name: " + this.name +
+                       ", Phone: " + this.phone + 
+                       ", Email: " + this.email;
+            }
+        };
+
+        
+        function printContactInfo(contact) {
+            document.getElementById("output").innerHTML += 
+                  contact.getInfo() + "<br>";
+        }
+
+
+        printContactInfo(contact1);
+        printContactInfo(contact2);
+
+    </script>
+
+</body>
+</html>
