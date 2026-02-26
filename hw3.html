@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Bio Cleaner</title>
+</head>
+<body>
+
+<h2>User Profile Cleaner</h2>
+
+<script>
+
+    let userProfile = {
+        username: " CoolUser99 ",
+        bio: " I LOVE coding! JavaScript is Great!!! "
+    };
+
+    function cleanUserBio(profile) {
+
+        let cleanedUsername = profile.username.trim().toLowerCase();
+        let cleanedBio = profile.bio.trim().toLowerCase();
+        cleanedBio = cleanedBio.replace(/javascript/g, "JS");
+        let bioLength = cleanedBio.length;
+
+        return {
+            username: cleanedUsername,
+            bio: cleanedBio,
+            bioLength: bioLength
+        };
+    }
+
+    const cleanedProfile = cleanUserBio(userProfile);
+    console.log(cleanedProfile);
+</script>
+
+</body>
+</html>
