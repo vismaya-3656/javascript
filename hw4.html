@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p  id="mysteryLevel"></p>
+    <p id="userScore"></p>
+    <p id="difference"></p>
+    <p id="squareRoot"></p>
+    <p id="piValue"></p>
+    <p id="implicit"></p>
+    <p id="highest"></p>
+    <p id="lowest"></p>
+
+<script>
+
+    let mysteryLevel = Math.floor(Math.random() * 50) + 1;
+    let userScoreStr = "45";
+    let userScore = Number(userScoreStr);
+    let difference = Math.abs(mysteryLevel - userScore);
+    let squareRoot = Math.sqrt(userScore);
+    let piValue = Math.PI;
+    let implicitResult = "20" * 5;
+    let highestValue = Math.max(10, 20, mysteryLevel);
+    let lowestValue = Math.min(10, 20, mysteryLevel);
+
+    document.getElementById("mysteryLevel").innerText = "Mystery Level: " + mysteryLevel;
+    document.getElementById("userScore").innerText = "User Score: " + userScoreStr + " (" + userScore + ")";
+    document.getElementById("difference").innerText = "Absolute Difference: " + difference;
+    document.getElementById("squareRoot").innerText = "Square Root of User Score: " + squareRoot;
+    document.getElementById("piValue").innerText = "Value of Pi: " + piValue;
+    document.getElementById("implicit").innerText = "Implicit Conversion ('20' * 5): " + implicitResult;
+    document.getElementById("highest").innerText = "Highest Value (10, 20, Mystery): " + highestValue;
+    document.getElementById("lowest").innerText = "Lowest Value (10, 20, Mystery): " + lowestValue;
+
+</script>
+
+</body>
+</html>
