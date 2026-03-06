@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Guess a number between 1 and 5</h2>
+<p id="message"></p>
+
+<script>
+let chances = 0;
+
+while (chances < 5) {
+    let num = Number(prompt("Enter a number between 1 and 5"));
+
+    if (num < 1 || num > 5) {
+        document.getElementById("message").innerHTML = "Invalid input";
+        continue;
+    }
+
+    chances++;
+
+    if (num === 3) {
+        document.getElementById("message").innerHTML = "You guessed it right!";
+        break;
+    } else {
+        document.getElementById("message").innerHTML = "Wrong guess. Try again.";
+    }
+}
+
+if (chances === 5 && num !== 3) {
+    document.getElementById("message").innerHTML = "Game over";
+}
+</script>
+
+</body>
+</html>
