@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<p id="output"></p>
+
+<script>
+
+let output = "";
+
+for (let i = 1; i <= 5; i++) {
+
+    let code = parseInt(prompt("Enter product code (1-3)"));
+    let qty = parseInt(prompt("Enter quantity"));
+
+    let total = 0;
+    let product = "";
+
+    switch(code) {
+        case 1:
+            product = "Apple";
+            total = 30 * qty;
+            break;
+
+        case 2:
+            product = "Banana";
+            total = 10 * qty;
+            break;
+
+        case 3:
+            product = "Mango";
+            total = 50 * qty;
+            break;
+
+        default:
+            output += "Invalid product code. Skipped<br>";
+            continue;
+    }
+
+    output += product + " Total: ₹" + total + " - ";
+
+    if (total > 100) {
+        output += "High purchase<br>";
+    } else {
+        output += "Normal purchase<br>";
+    }
+}
+
+document.getElementById("output").innerHTML = output;
+
+</script>
+
+</body>
+</html>
