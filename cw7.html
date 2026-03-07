@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        friend = {
+            name: "john",
+            birthDate: "1999-07-05"
+        }
+        let birthday = new Date(friend.birthDate);
+        let today = new Date();
+        let age = today.getFullYear() - birthday.getFullYear();
+        let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        
+        let masam = months[birthday.getMonth()];
+        let day = birthday.getDate();
+        let year = birthday.getFullYear();
+        
+       
+        document.getElementById("demo").innerHTML = (friend.name + " was born on " + day + " " + masam + " , " + year + " and is " + age + " years old")
+    </script>
+</body>
+</html>
