@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Google" with "Mashupstack" in the sentence below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"> "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.</p>
+<p id="count"></p>
+<p id="caps"></p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var txt = str.replace(/bad|ugly|stupid/ig,"***");
+  document.getElementById("demo").innerHTML = txt;
+  let numbers = txt.match(/\d+/g);
+
+let count = numbers ? numbers.length : 0;
+document.getElementById("count").innerHTML = "count of numbers: " + count;
+let words = txt.match(/\b[A-Z][a-zA-Z]*/g);
+let wordNumbers = words ? words.length : 0;
+document.getElementById("caps").innerHTML = "count of words starting with Capital letters: " + wordNumbers;
+
+}
+</script>
+
+</body>
+</html>
